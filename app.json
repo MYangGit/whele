@@ -1,0 +1,79 @@
+{
+  "pages": [  
+    "pages/sort/sort",
+    "pages/meng/meng",  
+    "pages/login/login",
+    "pages/setting/setting",
+    "pages/register/register",
+    "pages/search/search",
+    "pages/pay/pay",
+    "pages1/market/market",
+    "pages3/template/template",
+    "pages3/template1/template1",
+    "pages3/template2/template2",
+    "pages/paySuccess/paySuccess",
+    "pages/set/set",
+    "pages/dingdan/dingdan",
+    "pages/cart/cart",
+    "pages/cart/tuiguang/tuiguang",
+    "pages/my/my",
+    "pages/site/site",
+   
+    "pages/liulan/liulan",
+    "pages/qita/qita",
+    "pages/kefu/kefu",
+    "pages1/yi/yi",
+    "pages1/er/er",
+    "pages1/san/san",
+    "pages1/si/si",
+    "pages1/wu/wu",
+    "pages1/liu/liu",
+    "pages2/jsj/jsj",
+    "pages2/materials/materials"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#409EFF",
+    "navigationBarTitleText": "友雷平台",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh":true,
+    "backgroundColor":"#fff"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar":{
+    "color":"#000",
+    "selectedColor":"#ff4401",
+    "backgroundColor":"white",
+    "borderStyle":"black",
+    "list":[
+      {
+        "pagePath": "pages/sort/sort",
+        "text":"首页",
+        "iconPath":"img/1.0.png",
+        "selectedIconPath":"img/1.1.png"
+        
+      },
+      {
+        "pagePath":"pages/meng/meng",
+        "text": "更多",
+        "iconPath": "img/2.0.png",
+        "selectedIconPath": "img/2.1.png"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "推广",
+        "iconPath": "img/3.0.png",
+        "selectedIconPath": "img/3.1.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "img/4.0.png",
+        "selectedIconPath": "img/4.1.png"
+      }
+    ]
+    
+  }
+  
+
+}
