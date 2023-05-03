@@ -1,0 +1,25 @@
+<!--pages/cart/tuiguang/tuiguang.wxml-->
+<view class='content'>
+<view class='but-tp'>
+<view >
+<text bindtap='increse'>点击输入推广内容</text>
+<image bindtap='tpTap' hidden='{{!flag}}' class='up-tp' src='../../../base/up.png'></image>
+</view> 
+</view>
+<textarea bindblur='saveDetail' maxlength='250' placeholder='商品描述及地址' hidden='{{!flag}}' class='details'>
+</textarea>
+<button bindtap='upi'>添加图片</button>
+<view class='imgView'>
+<block wx:for="{{drawing}}" >
+<view class='itemImg'>
+<image bindtap='previewImg' class='editor' src='{{item}}'></image>
+<view class='delete'  id="{{index}}"  bindtap='deleteImg'>X</view>
+</view>
+</block>
+</view>
+</view>
+<view class='bnt' >
+<button style="width:100%" bindtap='backspace' >取消</button>
+<button style="width:100%" bindtap="uploading" type='primary'>上传</button>
+</view>
+

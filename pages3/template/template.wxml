@@ -1,0 +1,35 @@
+<!--pages3/template/template.wxml-->
+<scroll-view style="width:100%;height:{{winHeight}}px" scroll-y  > 
+<!-- <view class="MY">
+<image src=""></image>
+</view> -->
+<block wx:for="{{greens}}">
+  <view data-id="{{item.storeId}}"  class="box" hover-class='tap' >
+    <view data-greenId="{{index}}" bindtap='importTap' class='img'>
+      <image style="width:100%;height:100%;margin-top:10px;" src="{{item.green[0].src}}"></image>
+    </view>
+    <view class='version'>
+      <view data-greenId="{{index}}" bindtap='importTap' class='greenName'>
+      <text class="{{color[index]}}" style='font-size: 30px;'>{{index+1}}</text>
+      <text>{{item.green[0].greenName}}</text>
+      <text style='color:#999;font-size:10px;'>已售{{item.num}}单</text>
+      <text style="color:red">{{item.green[0].price}}￥</text>
+    </view>
+    <view class='information'>
+      <view class="reason">
+      <text style='color:#999'>推荐理由：</text>
+      <block wx:for="{{item.recommend}}">
+        <text style='border:1px solid #c77;color:#c77;margin-left: 5px;font-size:12px;'>{{item}}</text>
+      </block>
+    </view>
+    <view data-StoreId="{{index}}" bindtap="importStoreTap" class="store" >
+      <text style='color: rgba(76, 76, 133, 0.664);'>{{item.storeName}}</text>
+      <text wx:if="{{item.onOff}}" style='font-size: 15px;color:#090;font-size:10px'>进店看看></text>
+      <text wx:else style='font-size: 15px; color:#f20;font-size:10px'>暂停营业></text>
+    </view>
+</view>
+</view>
+</view>
+</block>
+</scroll-view>
+

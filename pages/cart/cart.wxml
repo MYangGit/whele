@@ -1,0 +1,12 @@
+<!--pages/cart/cart.wxml-->
+<button  style="tuguang" bindtap='tuiguang'>*我要推广*</button>
+<view class='big-content'>
+<view class='content'>
+<view class='text'>{{text}}</view>
+<view class='picture-view'>
+<black wx:for="{{img}}">
+<image bindtap='previewImg'  src='{{item}}'></image>
+</black>
+</view>
+</view>
+</view>

@@ -1,0 +1,12 @@
+/* pages/paySuccess/paySuccess.wxss */
+.contaner{
+  width: 100%;
+  height: 500rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+.info{
+  margin-top: 50px;
+}

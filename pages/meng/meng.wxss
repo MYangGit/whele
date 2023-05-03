@@ -1,0 +1,158 @@
+/* pages/meng/meng.wxss */
+.cantents{
+  background-color: rgb(254, 253, 249);
+
+}
+.sousuo{
+  position: fixed;
+  top:0;
+  left: 0;
+  vertical-align: middle;
+  height: 40px;
+  line-height: 40px;
+  width: 100%;
+  z-index: 1;
+  background: linear-gradient(#ff4100,transparent);
+}
+.redLayer{
+  position: absolute;
+  top:0;
+  left: 0;
+  height: 40px;
+  width: 100%;
+  background: #ff4100;
+}
+.searchBox{
+  position: fixed;
+  margin-top: 0px;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  z-index: 1;
+}
+.log{
+  color: white;
+  margin-left: 10px;
+}
+.search{
+  margin-left: 10px;
+  height: 60%;
+  width: 80%;
+  margin-top: 0px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  border: 1px solid rgba(231, 200, 200, 0.836);
+  line-height: 90rpx;
+  border-radius: 10px;
+  color: rgb(243, 93, 93);
+  background: transparent;
+}
+.icon{
+  height: 40px;
+  width: 30px;
+  text-align: center;
+}
+.logintp{
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: 15px;
+  vertical-align: middle;
+}
+.box{
+  position: relative;
+  width:100%;
+  height:300rpx;
+  margin-bottom: 10px;
+  border: 1px solid rgb(236, 217, 217);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.tap{
+  background-color:rgb(250, 50, 60)
+}
+.swi{
+  margin: auto;
+  width:95%;
+  margin-top: 10px;
+  background-color:#eeea10;
+  height: 300rpx;
+}
+.carousel{
+  width: 100%;
+  height: 100%;
+}
+.canText{
+  position: absolute;
+  top: 20px;
+  /* bottom: 0; */
+  left: -10px;
+  color: rgb(19, 18, 18);
+  width: 180rpx;
+  font-size: 16px;
+  height: 50rpx;
+  line-height: 40rpx;
+  background-color: #D9ECFF;
+  text-align: center;
+  border-radius: 10px;
+}
+.cantent{
+  margin: 0 auto;
+  width: 98%;
+  background: white;
+}
+.logost{
+  width: 50%;
+  height: 80%;
+}
+
+.current{
+  margin:0 auto;
+  width: 98%;
+  height: 220rpx;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.leftcurrent{
+  cursor: pointer;
+	width:45%;
+  height: 100px;
+  /* background: #F10180; */
+  background-color: #66B1FF;
+  border-right: 1px solid white;
+  border-radius: 10px;
+}
+.rightcurrent{
+  cursor: pointer;
+  width: 45%;
+  background: #A0CFFF;
+  height: 100px;
+  border-radius: 10px;
+}
+.currentText{
+  position: relative;
+  cursor: pointer;
+  padding-left: 10px;
+  font-weight: 700;
+	height: 20px;
+	line-height: 20px;
+	color: white;
+}
+.currentImg{
+  margin: 0 auto;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	width: 60%;
+	position: relative;
+	cursor: pointer;
+	height: 68px;
+  overflow: hidden;
+	border-radius: 5px;
+}

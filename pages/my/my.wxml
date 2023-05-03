@@ -1,0 +1,62 @@
+<!--pages/my/my.wxml-->
+<view class="wd" >
+ <image bindtap="bindsetting"  class='tp' src='../../base/6.0.png'></image>
+  <view wx:if='{{loging}}' bindtap="bindsetting" class="userinfo">
+      <image class="userinfo-avatar" src="{{userinfo.user_tp}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userinfo.user_name}}</text>
+  </view>
+  <view wx:else bindtap="entranceLogin" class="userinfo">
+      <image class="userinfo-avatar" src="../../base/login.png" mode="cover"></image>
+      <text class="userinfo-nickname">登录</text>
+  </view>
+</view>
+<view class='DD' >
+<navigator url='../dingdan/dingdan' hover-class="navigator-hover" >
+<view class='wd1'>
+<view class='align'><image class='tp1' src='../../base/0.4.png'></image><text style='  text-align: center;'>我的订单</text></view>
+<view><image class='tp1' src='../../base/j1.png'></image></view>
+</view>
+</navigator>
+<view class="content">
+<view class="content-item" style='backgrund-color:#000000'><navigator url='../dingdan/dingdan' hover-class="navigator-hover" ><image  class='tp2' src='../../base/5.0.png'></image><text class='wz'>待付款
+</text></navigator></view>
+<view  class="content-item"><navigator url='../dingdan/dingdan' hover-class="navigator-hover" ><image  class='tp2' src='../../base/5.1.png'></image><text class='wz'>待收货
+</text></navigator></view>
+<view  class="content-item"><navigator url='../liulan/liulan' hover-class="navigator-hover" ><image  class='tp3' src='../../base/5.2.png'></image><text class='wz'>我的收藏</text></navigator></view>
+</view>
+</view>
+
+<swiper class="swi "  autoplay='1' acircular="true" current="{{xpg}}">
+<swiper-item>
+<image class="carousel" src="/../img/ad/1.JPG"></image>
+</swiper-item>
+<swiper-item>
+<image class="carousel" src="/../img/ad/2.jpeg"></image>
+</swiper-item>
+<swiper-item>
+<image class="carousel" src="/../img/ad/3.jpg"></image>
+</swiper-item>
+<swiper-item>
+<image class="carousel" src="/../img/ad/4.jpg"></image>
+</swiper-item>
+</swiper>
+<view class='wd2'>
+<view class='h' bindtap="addressTap" ><image  class='tp1' src='../../base/0.1.png'></image><text> 我的地址
+</text></view>
+<view bindtap="addressTap" ><image  class='tp4' src='../../base/j3.png'></image></view>
+</view>
+<navigator url='../qita/qita' hover-class="navigator-hover" >
+<view class='wd2'>
+<view class='h' ><image  class='tp1' src='../../base/0.2.png'></image><text>其它服务</text></view>
+<view ><image class='tp4' src='../../base/j3.png'></image></view>
+</view>
+</navigator>
+<navigator url='../kefu/kefu' hover-class="navigator-hover" >
+<view class='wd2'>
+<view class='h' ><image  class='tp1' src='../../base/0.3.png'></image><text>我的客服</text></view>
+<view ><image class='tp4' src='../../base/j3.png'></image></view>
+</view>
+</navigator>
+
+
+

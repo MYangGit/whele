@@ -1,0 +1,54 @@
+/* pages1/si/si.wxss */
+@import"/pages1/yi/yi.wxss"
+/* .head{
+  width: 100%;
+  height:300rpx;
+  background-color:rgba(127, 255, 212, 0.158);
+}
+.theme{
+  font-size: 20px;
+  color: rgb(212, 57, 153);
+  display: flex;
+  justify-content: center;
+}
+.box{
+  width:100%;
+  height:300rpx;
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: row;
+}
+.scr1{
+  width:100%;
+  height:500rpx;
+  background-color:white;
+  
+}
+.scr3{
+  width:100%;
+  height:300rpx;
+  background-color:white;
+}
+.img{
+  height: 60%;
+  width:25%;
+  background:rgba(228, 8, 8, 0.075);
+}
+.version{
+  height: 100%;
+  width:74%;
+  background:white;
+}
+.store{
+  width: 98%;
+  height: 80rpx;
+  line-height: 80rpx;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+  background: white;
+}
+.information{
+  border-bottom: 1px dashed #ccc;
+  height: 120rpx;
+} */

@@ -1,0 +1,77 @@
+<!--pages/login/login.wxml-->
+<view style="height:{{systemHeight}}px;" class="bigcontent">  
+   <view class="loginBox">
+      <view class="phoneSno">
+        <view style="background:#67C23A" class='swiper-tab'>
+          <view class="tab-item {{currentTab==0 ? 'on' : ''}}" data-current='0' bindtap='swichNav'>
+             <view class="">账号登录</view>
+          </view>
+          <view class="tab-item {{currentTab==1 ? 'on' : ''}}" data-current='1' bindtap='swichNav'>  
+            <view class=''>短信登录</view>
+         </view>
+        </view>
+        <view class="log">
+        <swiper class='swiper' current='{{currentTab}}' duration='200' bindchange='swiperChange'>
+         <swiper-item>
+         <view class="inp-text">
+         <text>账号：</text>
+         <input bindblur="phoneBlur" placeholder="学号/电话/邮箱" type="text"></input>
+         </view>
+         <view  class="inp-text">
+         <text>密码：</text>
+         <input bindblur="psdBlur" type="text"></input>
+         </view>
+         <view class="inp-text">
+         <text>验证码：</text>
+         <input bindblur="encodeBlur" style="width:120px;" type="number"></input>
+         <view class="authCode">
+           <button class="sendCode" bindtap="changeCode">{{numcode}}</button>
+         </view>
+         </view>
+         <button bindtap="Login" style="margin-top: 18px;"  type="primary">登录</button>
+         </swiper-item>
+         <swiper-item>
+          <view class="inp-text">
+         <text>账号：</text>
+         <input  bindblur="phoneBlur" value="{{cell}}" placeholder="电话" type="text"></input>
+         </view>
+         <view class="inp-text">
+         <text>验证码：</text>
+         <input bindblur="encodeBlur" style="width:120px;" type="number"></input>
+         <view class="authCode">
+           <button disabled="{{gainFlag}}" class="sendCode" bindtap="sendCodeTime">{{kay}}</button>
+         </view>
+         </view>
+         <button bindtap="noteLogin" style="margin-top: 18px;"  type="primary">登录</button>
+         </swiper-item>
+         </swiper>
+        </view>
+        <view class="reg">
+          <view class="goReg">
+          <text bindtap="toRegister">注册</text>
+          <text>忘记密码</text>
+          </view>
+        </view>
+      </view>
+      <view class="other">
+        <view class="imgEnter">
+        <button bindtap="showModal" class="wxLogin">微信一键登录</button>
+        </view> 
+      </view>
+      <!--登录弹窗-->
+      <!--屏幕背景变暗的背景  -->
+  <view class="commodity_screen" bindtap="hideModal" wx:if="{{showModalStatus}}"></view>
+     <!--弹出框  -->
+  <view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus}}"><view class="modal-dialog" wx:if="{{showModal}}">
+  <view class="modal-content">
+   <button bindtap="codeLogin">仅微信号登录</button>
+    <!-- <view><image src='{{userInfo.avatarUrl}}' class='show'></image></view>
+    <view class="userinfo-nickname">{{userInfo.nickName}}</view> -->
+    <button open-type='getPhoneNumber' bindgetphonenumber="getPhoneNumber">使用微信绑定手机号登录</button>
+  </view>
+</view>
+  </view>
+  </view>
+</view>
+
+

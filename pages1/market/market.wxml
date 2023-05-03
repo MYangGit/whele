@@ -1,0 +1,30 @@
+<!--pages1/market/market.wxml-->
+<view style="height:{{windowHeight}}">
+<!--分类导航栏-->
+<scroll-view class='left-navbar' scroll-y="true">
+  <block wx:for="{{leftArray}}">
+    <view style="line-height:60px;height:60px"  class="{{ currentTab == index ? 'active' : '' }}"  bindtap="{{ currentTab != index ? 'navbarTap':'' }}" id="{{index}}" data-screenId="{{item.screenId}}">{{item.screenName}}</view>
+  </block>
+</scroll-view>
+<scroll-view class="right" scroll-y="true" scroll-top="{{scrollTop}}">
+  <!--顶部图片-->
+  <view class="goods-banner">
+  <image class="img-banner" src="{{reghtArray[screenId].showImageUrl}}" wx:if="{{reghtArray[screenId].showImageUrl}}" mode="scaleToFill"></image>
+  </view>
+  <!--商品展示-->
+  <view wx:if="{{reghtArray[screenId].havelist}}" >
+  <view class="goods-list" wx:for="{{reghtArray[screenId].list}}" wx:key="unique">
+  <view class="goods-title">—— {{item.subtitle}} ——</view>
+  <view wx:for="{{item.childrenArray}}" class="goods" wx:key="unique" bindtap="ToSearchResult" data-relativeId="{{item.id}}" id="{{ reghtArray.screenId}}" >
+  <image wx:if="{{item.showImageUrl}}" class="img" src="{{item.showImageUrl}}" ></image>
+  <image wx:else class="img" src="../../base/replace.png"></image>
+  <text>{{item.screenName}}</text>
+  </view>
+  </view>
+  </view>
+  <view wx:else class="nohave">该分类暂无数据！</view>
+</scroll-view>
+</view>
+
+
+

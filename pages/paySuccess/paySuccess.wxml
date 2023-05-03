@@ -1,0 +1,11 @@
+<!--pages/paySuccess/paySuccess.wxml-->
+<view class="contaner"> 
+   <view class="info">
+     <icon type="success" size="80" color="green"/> 
+     <view>支付成功!</view> 
+    </view>    
+    <view class="info img"> 
+      <image src="/img/code.jpg" /> 
+    </view>
+  </view>
+

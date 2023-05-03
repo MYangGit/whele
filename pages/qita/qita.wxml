@@ -1,0 +1,9 @@
+<!--pages/qita/qita.wxml-->
+<view class='content'>
+<block wx:for='{{server}}'>
+<view class='itembox' bindtap='bindcounterTap{{item.id}}' >
+<image class='tpsty' src='{{item.src}}'></image>
+<text>{{item.text}}</text>
+</view>
+</block>
+</view>

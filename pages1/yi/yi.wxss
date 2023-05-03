@@ -1,0 +1,52 @@
+/* pages1/yi/yi.wxss */
+.head{
+  width: 100%;
+  height:300rpx;
+  background-color:rgba(127, 255, 212, 0.158);
+}
+.theme{
+  font-size: 20px;
+  color: rgba(221, 73, 221, 0.671);
+  text-align: center;
+  background: #acaaaa15;
+  line-height: 40rpx;
+}
+.scr{
+  width:100%;
+  background-color:white;
+  margin-top: 10px;
+  height: 600px;
+  overflow: auto;
+}
+.box{
+  width:100%;
+  height:200rpx;
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: row;
+}
+.img{
+  margin-top: 9px;
+  height: 60%;
+  width:25%;
+  background:rgba(228, 8, 8, 0.075);
+}
+.version{
+  height: 100%;
+  width:74%;
+  background:rgba(17, 162, 219, 0)
+}
+.store{
+  width: 98%;
+  height: 80rpx;
+  line-height: 80rpx;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+  background: white;
+}
+.information{
+  border-bottom: 1px dashed #ccc;
+  height: 120rpx;
+  
+}

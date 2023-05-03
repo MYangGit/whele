@@ -1,0 +1,43 @@
+<!--pages/register/register.wxml-->
+<view style="height:{{systemHeight}}px;" class="bigcontent">  
+   <view class="loginBox">
+      <view class="phoneSno">
+        <view  class="log">
+           <view class="inp-text">
+              <text>账号：</text>
+              <input bindblur="phoneBlur" placeholder="电话/邮箱" type="text"></input>
+           </view>
+           <view class="inp-text">
+              <text>学号：</text>
+              <input bindblur="snoblur" placeholder=""type="text"></input>
+          </view>
+          <view  class="inp-text">
+              <text>密码：</text>
+              <input bindblur="psdBlur" type="text"></input>
+         </view>
+         <view  class="inp-text">
+              <text>确认密码：</text>
+              <input bindblur="repsdBlur" type="text"></input>
+         </view>
+         <view class="inp-text">
+              <text>验证码：</text>
+              <input  bindblur="codeblur" style="width:120px;" type="text"></input>
+              <view class="authCode">
+                 <button disabled="{{gainFlag}}" class="sendCode" bindtap="sendCodeTime">{{kay}}</button>
+              </view>
+         </view>
+         <button bindtap="bindregister" style="margin-top: 18px;"  type="primary">注册</button>
+        </view>
+         <view class="reg">
+          <view class="goReg">
+          <text bindtap="toLogin">登录</text>
+          <text></text>
+        </view>
+        </view>
+       
+     
+      </view>
+      
+   </view>
+</view>
+

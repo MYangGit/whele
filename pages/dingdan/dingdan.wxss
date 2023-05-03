@@ -1,0 +1,211 @@
+/* pages/dingdan/dingdan.wxss */
+.page {
+margin-left: 10rpx;
+margin-right: 10rpx;
+}
+.swiper-tab {
+display: flex;
+flex-direction: row;
+line-height: 80rpx;
+border-bottom: 2rpx solid #777;
+margin-bottom: 10rpx;
+}
+
+.tab-item {
+width: 33.3%;
+text-align: center;
+font-size: 15px;
+color: #777;
+}
+.on {
+color:#FF4401;
+border-bottom: 5rpx solid #FF4401;
+}
+.oncheckAll{
+ display: inline-block;
+ margin-right: 10px;
+ text-align: center;
+ width: 1.2em;
+ line-height: 1.2em;
+ height: 1.2em;
+ border: 1px solid rgb(233, 230, 230);
+ border-radius: 70px;
+ color: white;
+ background: #FF4401;
+}
+.onradio{
+ margin-left: 6px;
+ margin-right: 10px;
+ text-align: center;
+ width: 1.2em;
+ line-height: 1.2em;
+ height: 1.2em;
+ border: 1px solid rgb(233, 230, 230);
+ border-radius: 70px;
+ color: white;
+ background: #FF4401;
+}
+.swiper {
+height:580px;
+background: rgba(242, 242, 242, 0.295);
+}
+.order{
+  height: 250rpx;
+  width: 95%;
+  background:white;
+  border: 1px solid rgb(233, 230, 230);
+  border-radius: 10px;
+  margin: 0 auto;
+}
+.orderTop{
+  margin: 0 auto;
+  height: 60rpx;
+  width: 96%;
+  line-height: 60rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.checkAll{
+ display: inline-block;
+ margin-right: 10px;
+ text-align: center;
+ width: 1.2em;
+ line-height: 1.2em;
+ height: 1.2em;
+ border: 1px solid rgb(233, 230, 230);
+ border-radius: 70px;
+ color: white;
+ background: white;
+}
+.orderFoot{
+  display: flex;
+  flex-direction: row;
+  height:190rpx;
+  width: 100%;
+  background: rgba(243, 157, 157, 0.041); 
+  line-height: 190rpx;
+}
+.footLeft{
+  width: 45%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.radio{
+ margin-left: 6px;
+ margin-right: 10px;
+ text-align: center;
+ width: 1.2em;
+ line-height: 1.2em;
+ height: 1.2em;
+ border: 1px solid rgb(233, 230, 230);
+ border-radius: 70px;
+ color: white;
+ background: white;
+}
+.img{
+  height: 180rpx;
+  width: 100px;
+  background: rgba(255, 217, 0, 0.164);
+}
+.greenName{
+  height: 50rpx;
+  line-height: 50rpx;
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+}
+.addCount{
+  display: flex;
+  height: 80rpx;
+  line-height: 80rpx;
+  width: 100%;
+  align-items: center;
+}
+.bnt{
+  display: flex;
+  flex-direction: row;
+  height: 20px;
+  width: 70px;
+  line-height: 20px;
+  font-size: 12px;
+  color: #FF4401;
+}
+button{
+  height: 100%;
+  width: 18px;
+  line-height: 100%;
+  border-radius: 0px;
+  display: flex;
+  justify-content: center;
+  color: #FF4401;
+  border: 1px solid #FF4401
+}
+button::after{
+  border: none;
+}
+.price{
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 15px;
+  color: red;
+}
+.price1{
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 15px;
+}
+.bottom-bar{ 
+display:flex; 
+position: fixed; 
+bottom:0; 
+width:100%; 
+height:80px; 
+line-height:80px; 
+background:#fff; 
+box-shadow: 0 -5px 10px #ccc; 
+} 
+.bottom-bar.hidden{ 
+display:none; 
+} 
+.bottom-bar>view{ 
+flex-grow: 1; 
+} 
+.bottom-bar .count{ 
+padding-left:10px; 
+} 
+.bottom-bar .num{ 
+margin-right:10px; 
+font-size:18px; 
+font-weight:bolder; 
+color:red; 
+} 
+.bottom-bar .btn{ 
+height:40px; 
+width:50px; 
+margin:20px 10px 0 0; 
+color:#fff; 
+line-height:40px; 
+text-align:center; 
+font-size:16px; 
+background:#ff4401; 
+}
+
+.dingd{
+  /* width:55%; */
+  height:100%;
+  margin-left: 10px;
+  color: #777;
+}
+.repay{
+  height: 50px;
+  line-height: 30px;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  width: 200rpx;
+  background-color: yellow;
+}
+.orderid{
+  font-size: 10px;
+}

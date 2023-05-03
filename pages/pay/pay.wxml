@@ -1,0 +1,99 @@
+<!--pages/pay/pay.wxml-->
+<view class='page'>
+<view class='swiper-tab'>
+ <view class="tab-item {{currentTab==0 ? 'on' : ''}}" data-current='0' bindtap='swichNav'>
+ <view class="">外卖配送</view>
+ </view>
+ <view class="tab-item {{currentTab==1 ? 'on' : ''}}" data-current='1' bindtap='swichNav'>  
+   <view class=''>到店自取</view>
+ </view>
+</view>
+<swiper class='swiper' current='{{currentTab}}' duration='200' bindchange='swiperChange'>
+ <swiper-item>
+ <view class='firstPage'>
+   <view class='content'>
+     <view bindtap='selectAddress' class='content-item' >{{site}}</view>
+     <view class='content-item' ><text>立即下单</text><text style='margin-left: 120px;'>大约{{time}}送达</text></view>
+    </view>
+    <view hidden="{{newFlag}}" class='commodity'>
+      <view class='merchant'>{{store}}</view>
+      <view>
+      <scroll-view scroll-y class='greens'>
+      <block wx:for="{{greens}}" >
+        <view class='goods'>
+          <view class='tp'><image src='{{item.src || item.picture}}'></image></view>
+          <text>{{item.greenName || item.title}}</text>  
+          <view>x{{item.count}}</view>
+        </view>
+      </block>
+      </scroll-view>
+        <view class='delivery'>
+         <text>餐盒费</text>
+         <text>￥{{other.tableware}}</text>
+        </view>
+        <view class='delivery'>
+         <text>配送费</text>
+         <text>￥{{other.freight}}</text>
+        </view>
+        <view  class='total'><text></text><text>小计：￥{{total.total_0}}</text></view>
+      </view>
+    </view>
+    <view class="bottom-bar"> 
+      <view class="count"> 
+       合计 <text class="num">{{total.total_0}} 元</text> 
+       </view> 
+       <view  bindtap='pay' class="btn"> 
+       <text>结账</text> 
+       </view> 
+     </view> 
+ </view> 
+ </swiper-item>
+ <swiper-item>
+   <view class='secondPage'>
+      <view class='content'>
+       <map class='map'></map>
+       <view class='time'>
+           自取时间：{{time}}
+           <view class="tel">
+              <text>预留电话:</text>
+              <input bindblur="blur"  style="width:120px" value="{{tel}}" type='number' maxlength='11'></input>
+           </view>
+       </view>
+      </view>
+      <view hidden="{{newFlag}}" class='commodity1'>
+      <view class='merchant'>{{store}}</view>
+      <view>
+      <scroll-view scroll-y  class='greens'>
+      <block wx:for="{{greens}}" >
+        <view  class="goods">
+          <view class="tp">
+           <image src="{{item.src || item.picture}}"></image>
+          </view>
+          <text>{{item.greenName || item.title}}</text>  
+          <view>x{{item.count}}</view>
+        </view>
+      </block>
+      </scroll-view>
+        <view class='delivery'>
+         <text>餐盒费</text>
+         <text>￥{{other.tableware}}</text>
+        </view>
+        <!-- <view class='delivery'>
+         <text>配送费</text>
+         <text>{{other.freight}}￥</text>
+        </view> -->
+        <view  class='total'><text></text><text>小计：￥{{total.total_1}}</text></view>
+      </view>
+    </view>
+      <view class="bottom-bar"> 
+      <view class="count"> 
+       合计 <text class="num">{{total.total_1}} 元</text> 
+       </view> 
+       <view bindtap='pay1' class="btn"> 
+       <text >结账</text> 
+       </view> 
+     </view> 
+   </view>
+ </swiper-item>
+</swiper>
+</view>

@@ -1,0 +1,82 @@
+<!--pages/dingdan/dingdan.wxml-->
+<view class="page" style="height:{{winHeight}}">
+<!--顶部导航栏-->
+<view style="width:{{winWidth}}" class="swiper-tab">
+<view class="tab-item {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">待付款</view>
+<view class="tab-item {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">待派送</view>
+<view class="tab-item {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">待收货</view>
+</view>
+<!--内容主体-->
+<swiper style="width:{{winWidth}}" class="swiper" current="{{currentTab}}" duration="200" bindchange="swiperChange">
+<swiper-item>
+<scroll-view style="width:100%;height:500px">
+<view class="order">
+<block wx:for="{{shoppingCart}}">
+<view class="orderTop">
+<view>
+<view data-check="{{index}}" bindtap="checkAll" class="{{item.checkAll ? 'oncheckAll' : 'checkAll'}}">♡</view>
+<view style="display:inline" data-store="{{index}}" bindtap="importTap">{{item.subtitle}}</view>
+</view>
+<text style="font-size:13px;">红包</text>
+</view>
+<view class="orderFoot">
+<view class="footLeft">
+<view data-check="{{index}}" bindtap="radio" class="{{item.radio ? 'onradio' : 'radio'}}">♡</view>
+<view class="img">
+<image style="width:100%;height:100%;" src="{{item.img}}"></image>
+</view>
+</view>
+<view style="width:55%;height100%;align-items: center;">
+<view class="greenName"><text>{{item.greenName}}</text></view>
+<view class="addCount">
+<view  class="bnt"><button data-check="{{index}}" bindtap="sub">-</button>{{item.count}}<button data-check="{{index}}" bindtap="add">+</button></view>
+</view>
+<view class="price"><text>￥{{item.price}}</text></view>
+</view>
+</view>
+</block>
+</view>
+</scroll-view>
+<view hidden="{{flag}}" class="bottom-bar"> 
+      <view class="count"> 
+       合计 <text class="num">{{totalMoney}} 元</text> 
+       </view> 
+       <view  bindtap='pay' class="btn"> 
+       <text>结账</text> 
+       </view> 
+     </view> 
+</swiper-item>
+<swiper-item>
+<!-- // 待发货 -->
+  <view class="order">
+  <block wx:for="{{dropShipping}}">
+    <view class="orderTop">
+      <view>
+        <view style="display:inline" data-shopid="{{item.shop_id}}" data-img="{{item.img}}" data-storename="{{item.subtitle}}" data-freight="{{item.send_cost}}" data-tableware="{{item.box_cost}}" data-tag="{{item.tag}}" bindtap="importTap">{{item.subtitle}}></view>
+        </view>
+        <text style="font-size:13px;">待发货</text>
+      </view>
+        <view class="orderFoot">
+          <view class="footLeft1">
+            <view class="img">
+               <image style="width:100%;height:100%;" src="{{item.img}}"></image>
+            </view>
+          </view>
+          <view class="dingd">
+            <view class="price1">
+              <view class="orderid">订单号：{{item.order_id}}</view>
+              <view>下单时间：{{item.time}}</view>
+              <view>总价：￥{{item.price}}</view>
+              <!-- <button class="repay">再来一单</button> -->
+            </view>
+         </view>
+        </view>
+  </block>
+</view>
+
+</swiper-item>
+<swiper-item>
+<!-- // 待收货 -->
+</swiper-item>
+</swiper>
+</view>

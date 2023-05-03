@@ -1,0 +1,60 @@
+<!--pages3/template2/template2.wxml-->
+    <scroll-view scroll-x="true" class="nav"  scroll-left="{{navScrollLeft}}" scroll-with-animation="{{true}}">
+        <block wx:for="{{navData}}" wx:for-index="idx" wx:for-item="navItem" wx:key="idx">
+            <view class="nav-item {{currentTab == idx ?'active':''}}"  data-current="{{idx}}" bindtap="switchNav">{{navItem.text}}</view>
+        </block>        
+    </scroll-view>
+    <!-- 页面内容 -->
+ <swiper class="tab-box" current="{{currentTab}}" duration="300" bindchange="switchTab">
+     <!--精心套餐-->
+    <view hidden="{{scrollTop}}" wx:if="{{currentTab==0}}" class="combo">
+     <view style="width:98%;">
+     <view class="title">
+     <text>精心套餐</text>
+     <text style="font-size:15px;width:{{windowWidth}}" >更多></text>
+     </view>
+     <scroll-view  scroll-x="true" class="scrPicture">
+     <block wx:for="{{setMal}}">
+     <view class="green" data-green="{{index}}" bindtap="pay">
+     <view class="tp"><image style="width:100%;height:100%" src="{{item.img}}"></image></view>
+     <view style="height:40%">
+      <view class="greenName" ><text>{{item.subtitle}}</text></view>
+      <view class="price"><text style="color:#cc9;font-size:25rpx;">已售{{item.sum}}</text>
+      <text style="color:red;">￥{{item.price}}</text></view>
+     </view>
+     </view>
+     </block>
+     </scroll-view>
+   </view>
+    </view>
+    <bloke wx:for="{{navigationBar}}">
+    <swiper-item >
+<scroll-view bindscroll="scroll"  class='scr' scroll-y  > 
+<block wx:for="{{item.greens}}">
+<view  data-id="{{index}}" bindtap='importTap' class="box" hover-class='tap' >
+<view class='img'><image style="width:100%;height:100%" src="{{item.logo}}"/></view>
+<view class='version'>
+<view class='store'><text style='font-size: 30px;'>{{item.storeName}}</text>
+<text wx:if="{{item.onOff}}" style='font-size: 15px;color:#090;'>正常营业></text>
+<text wx:else style='font-size: 15px; color:#f20;'>暂停营业></text>
+</view>
+<view class='information'>
+<text style='color:#999' >{{item.evaluate}}</text>|<text style='color:#999'>月售{{item.num}}单</text>
+<view>
+<text style='color:#999'>热卖商品：</text>
+<block wx:for="{{item.recommend}}">
+<text style='border:1px solid #c77;color:#c77;margin-left: 5px;'>{{item}}</text>
+</block>
+</view>
+<view class='activity'>
+</view>
+</view>
+</view>
+</view>
+</block>
+</scroll-view>
+</swiper-item>  
+</bloke>      
+</swiper>
+
+

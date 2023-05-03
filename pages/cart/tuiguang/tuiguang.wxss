@@ -1,0 +1,53 @@
+/* pages/cart/tuiguang/tuiguang.wxss */
+.content{
+  height: 580px;
+  margin-top: 10px;
+}
+.details{
+  padding-left: 10px;
+  border: 1px solid cornflowerblue;
+  width: 95%;
+  border-radius: 10px;
+  margin:0 auto;
+  height: 400rpx;
+}
+.but-tp{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px #F8F8F8 solid;
+  height: 100rpx; 
+  font-size: 20px;
+  background:#F8F8F8;
+}
+.up-tp{
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-left: 10rpx;
+}
+.editor{
+  margin-top: 10px;
+  width: 250rpx;
+  height: 300rpx;
+}
+.bnt{  
+  display:flex; 
+  flex-direction: column;
+  position: fixed; 
+  bottom:0px; 
+  width: 100%;
+}
+.imgView{
+  display: flex;
+  flex-direction: row;
+}
+.itemImg{
+  display: flex;
+  flex-direction: row;
+  width: 250rpx;
+  height: 300rpx;
+}
+.delete{
+  font-size: 20px;
+  color: #999;
+}

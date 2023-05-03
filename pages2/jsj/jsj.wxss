@@ -1,0 +1,53 @@
+/* pages2/jsj/jsj.wxss */
+page{
+  background: #000;
+}
+.screen{
+  position: fixed;
+  bottom: 780rpx;
+  word-wrap: break-word;
+  width: 750rpx;
+}
+.screen view{
+  color: white;
+  font-size: 30px;
+  text-align: right;
+  margin-right: 30rpx;
+}
+.bntGroup{
+  display: flex;
+  flex-direction: row;
+}
+.bnt-item{
+  width: 191rpx;
+  text-align: center;
+  line-height: 150rpx;
+  border-radius: 0rpx;
+}
+.zero{
+  width: 378rpx;
+}
+icon{
+  position: absolute;
+  left: 55rpx;
+  top:37rpx;
+}
+.white{
+  background: #EFEFED;
+}
+.orange{
+  background: #FC9504;
+}
+.gray{
+  background: #CFCFCF;
+}
+.bottom{
+  position: fixed;
+  bottom: 0rpx;
+}
+button::after{
+  border-radius:0rpx;
+}
+.shadow{
+  background: #999;
+}

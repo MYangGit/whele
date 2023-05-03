@@ -1,0 +1,43 @@
+<!--pages3/template1/template1.wxml-->
+<view style="height:{{systemHeight}};width:{{systemWidth}}">
+<view  class='shop-culture'>
+  <view class="store">
+    <image class="shop-cultureimg" src="{{storeImg}}"></image>
+    <view class="storeDescribe">
+      <view class="storename">{{storeName}}</view>
+      <view>{{tag}}</view>
+    </view> 
+  </view>
+  <view hidden='{{!flag}}' class='pay'>
+    <view class='pay-left'>
+      <view style='color:red;' id='amount'>￥{{orderCount.total}}</view>
+      <text style='font-size:30rpx;'>另需配送费￥{{otherCost.freight}}|支持自取</text>
+    </view>
+    <view class='pay-reght'>
+      <button bindtap="addCart" class='car'>加入订单</button>
+      <button style="background:linear-gradient(#ff4401,#e6744b);color:white" class='car' bindtap='pay'>立即购买</button>
+    </view>
+  </view>
+</view>
+<view class='guide'>所有菜品</view>
+<scroll-view class='scr-content' scroll-y>
+<view class='menus-content'>
+<block wx:for='{{greens}}'>
+<view class='menu'>
+<view class='imgs'>
+<image class='img' src='{{item.src || item.picture}}'></image>
+<view class="imgwz">{{item.greenName || item.title}}</view>
+</view>
+<view class='describe'>
+<text class='menu-name'>￥{{item.price || item.sell_price}} </text>
+<view class='but'>
+<button data-postid='{{index}}' hidden='{{!flag}}'bindtap='sub'  class='sub'>-</button>
+<view  hidden="{{!flag}}" style='font-size:30rpx;'>{{item.count}}</view>
+<button data-postid='{{index}}' bindtap='add' class='add'>+</button>
+</view>
+</view>
+</view>
+</block>
+</view>
+</scroll-view>
+</view>

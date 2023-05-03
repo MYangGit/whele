@@ -1,0 +1,64 @@
+/* pages1/market/market.wxss */
+/**分类栏**/
+.left-navbar{
+position:absolute;
+left:0;
+width:25%;
+height:99%;
+background-color:#eee;
+font-size:15px;
+}
+.left-navbar view{
+height:80rpx;
+line-height: 80rpx;
+text-align:center;
+}
+.active{
+background-color:#FFF;
+color:#ff4401;
+font-size:20px;
+border-left: 3px #ff4401 solid;
+}
+.right{
+position:absolute;
+right:0;
+width:75%;
+height:99%;
+}
+.goods-banner{
+  margin: auto;
+  width: 98%;
+}
+.img-banner{
+height:180rpx;
+width:100%;
+}
+.goods-list{
+display:flex;
+flex-wrap:wrap;
+margin-top:10rpx;
+}
+.goods-title{
+width:100%;
+font-size:15px;
+font-weight:bold;
+text-align: center;
+color: #cecac9;
+}
+.goods{
+width:150rpx;
+font-size:14px;
+margin:15rpx;
+text-align:center;
+}
+.img{
+width:140rpx;
+height:140rpx;
+}
+.nohave{
+  text-align: center;
+  color: black;
+  margin-top: 20px;
+}
+
+

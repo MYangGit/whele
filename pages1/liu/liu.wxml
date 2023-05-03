@@ -1,0 +1,28 @@
+<!--pages1/liu/liu.wxml-->
+<view class='head'><text>西门</text></view>
+<view class='theme'><text >*某街*</text></view>
+<scroll-view class='scr' scroll-y  > 
+<block wx:for="{{first_floor}}">
+<view data-id="{{item.storeId}}" bindtap='import1Tap' class="box" hover-class='tap' >
+<view class='img'><image style="width:100%;height:100%" src="{{item.logo}}"/><image src="{{item.src}}"></image></view>
+<view class='version'>
+<view class='store'><text style='font-size: 30px;'>{{item.storeName}}</text>
+<text wx:if="{{item.onOff}}" style='font-size: 15px;color:#090;'>正常营业></text>
+<text wx:else style='font-size: 15px; color:#f20;'>暂停营业></text>
+</view>
+<view class='information'>
+<text style='color:#999' >{{item.evaluate}}</text>|<text style='color:#999'>月售{{item.num}}单</text>
+<view>
+<text style='color:#999'>热卖商品：</text>
+<block wx:for="{{item.recommend}}">
+<text style='border:1px solid #c77;color:#c77;margin-left: 5px;'>{{item}}</text>
+</block>
+</view>
+<view class='activity'>
+</view>
+</view>
+</view>
+</view>
+</block>
+</scroll-view>
+

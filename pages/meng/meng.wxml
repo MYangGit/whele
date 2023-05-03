@@ -1,0 +1,56 @@
+<!--pages/meng/meng.wxml-->
+<scroll-view scroll-y class="cantents" style="height:{{systemHeight}};width:{{systemWidth}}" bindscroll="scroll">
+<!-- <view class="sousuo">
+<view class="redLayer" style="opacity:{{opacity}}"></view>
+<view class="searchBox">
+<view bindtap="searchTap" class="search" plain='true'>
+<view class="icon"><icon type="search" color="#CCC" size="18"></icon></view>
+<input disabled="ture" type="text"></input>
+</view>
+<view wx:if='{{loging}}'><image class="logintp"  bindtap="bindtopsetting" src="../../img/4.1.png"></image></view>
+<view wx:else  bindtap="bindtopLogin" class="log">登录</view>
+</view>
+</view> -->
+<!-- <swiper class="swi " indicator-dots='1' indicator-color='white' indicator-active-color='#ff4401' autoplay='1' acircular="true">
+<block wx:for="{{picture}}">
+<swiper-item>
+<image class="carousel" src="{{item.car_picture}}"></image>
+</swiper-item>
+</block>
+</swiper> -->
+<view class='current'>
+    <view class="leftcurrent">
+      <view class="currentText"><text>{{leftcurrent[0].title}}</text></view>
+      <view class="currentImg">
+         <image style="width: 100%;height: 100%;" src="{{leftcurrent[0].img}}"></image>
+      </view>
+    </view>
+    <view class="rightcurrent">
+      <view class="currentText"><text>{{rightcurrent[0].title}}</text></view>
+      <view class="currentImg">
+         <image style="width: 100%;height: 100%;"  src="{{rightcurrent[0].img}}"></image>
+      </view>
+    </view>
+ </view>
+
+<view class="cantent">
+<block wx:for="{{canteen}}">
+<view bindtap="openEntrance" id="{{item.id}}"  class="box" hover-class='tap' >
+<image class="carousel" src="{{item.can_picture}}"></image>
+<view class="canText" >{{item.site}}</view>
+</view>
+</block>
+</view>
+<!-- <view  bindtap='bindyiTap' class="box" hover-class='tap' >
+一食堂</view>
+<view  bindtap='binderTap' class="box" hover-class='tap' >
+二食堂</view>
+<view  bindtap='bindsanTap' class="box" hover-class='tap' >
+三食堂</view>
+<view  bindtap='bindxingTap' class="box" hover-class='tap' >
+新型食堂</view>
+<view  bindtap='bindzhengTap' class="box" hover-class='tap' >
+正门</view>
+<view  bindtap='bindxiTap' class="box" hover-class='tap' >
+西门</view> -->
+</scroll-view>
